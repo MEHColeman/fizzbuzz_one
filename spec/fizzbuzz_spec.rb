@@ -49,4 +49,19 @@ module FizzBuzz
       expect(Fizzbuzz.fizzbuzzy?(15)).to be_truthy
     end
   end
+
+  RSpec.describe Fizzbuzz, '.to_output' do
+    it 'returns the integer if it is not fizzy or buzzy' do
+      expect(Fizzbuzz.to_output(2)).to eq 2
+    end
+    it 'returns the integer if it is not fizzy or buzzy' do
+      expect(Fizzbuzz.to_output(3)).to eq 'Fizz'
+    end
+    it 'returns the integer if it is not fizzy or buzzy' do
+      expect(Fizzbuzz.to_output(5)).to eq 'Buzz'
+    end
+    it 'returns the integer if it is not fizzy or buzzy' do
+      expect(Fizzbuzz.to_output(15)).to eq 'Fizzbuzz'
+    end
+  end
 end

@@ -20,5 +20,13 @@ module FizzBuzz
     def self.fizzbuzzy?(candidate)
       fizzy?(candidate) && buzzy?(candidate)
     end
+
+    def self.to_output(numeric_value)
+      return 'Fizzbuzz' if fizzbuzzy?(numeric_value)
+      return 'Fizz' if fizzy?(numeric_value)
+      return 'Buzz' if buzzy?(numeric_value)
+
+      numeric_value
+    end
   end
 end
