@@ -8,5 +8,17 @@ module FizzBuzz
         print seperator
       end
     end
+
+    def self.fizzy?(candidate)
+      (candidate % 3).zero?
+    end
+
+    def self.buzzy?(candidate)
+      (candidate % 5).zero?
+    end
+
+    def self.fizzbuzzy?(candidate)
+      fizzy?(candidate) && buzzy?(candidate)
+    end
   end
 end
