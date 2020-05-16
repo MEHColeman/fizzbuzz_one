@@ -9,6 +9,16 @@ module FizzBuzz
         .to output("1, 2\n")
         .to_stdout_from_any_process
     end
+    it 'outputs Fizz when divisible by 3' do
+      expect { Fizzbuzz.output(3) }
+        .to output("1, 2, Fizz\n")
+        .to_stdout_from_any_process
+    end
+    it 'outputs Buzz when divisible by 5' do
+      expect { Fizzbuzz.output(5) }
+        .to output("1, 2, Fizz, 4, Buzz\n")
+        .to_stdout_from_any_process
+    end
   end
 
   RSpec.describe Fizzbuzz, '.fizzy?' do
