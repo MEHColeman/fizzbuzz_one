@@ -1,1 +1,3 @@
-puts '1, 2, 3, Fizz'
+require_relative 'lib/fizzbuzz'
+
+FizzBuzz::Fizzbuzz.output ARGV[0].to_i
